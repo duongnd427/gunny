@@ -1,5 +1,8 @@
+import base.GameObject;
 import base.GameObjectManager;
 import game.background.Background;
+import game.gift.Gift;
+import game.gift.GiftSpawner;
 
 
 import javax.swing.*;
@@ -26,6 +29,7 @@ public class GameCanvas extends JPanel {
 
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
+        GameObjectManager.instance.add(new GiftSpawner());
     }
 
 
