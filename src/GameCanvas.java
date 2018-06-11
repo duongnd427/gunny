@@ -1,9 +1,8 @@
-import base.GameObject;
 import base.GameObjectManager;
 import game.background.Background;
 import game.gift.GiftSpawner;
-import game.player.Player1P;
-import game.player.Player2P;
+import game.player.Player1;
+import game.player.Player2;
 import input.KeyboardInput;
 
 
@@ -32,8 +31,8 @@ public class GameCanvas extends JPanel {
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
         GameObjectManager.instance.add(new GiftSpawner());
-        GameObjectManager.instance.add(new Player1P());
-        GameObjectManager.instance.add(new Player2P());
+        GameObjectManager.instance.add(new Player1());
+        GameObjectManager.instance.add(new Player2());
     }
 
 

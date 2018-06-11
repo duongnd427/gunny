@@ -3,14 +3,14 @@ package game.player;
 import base.Vector2D;
 import input.KeyboardInput;
 
-public class Player1PMove {
+public class Player1Move {
 
     public Vector2D velocity;
 
-    public Player1PMove(){
+    public Player1Move(){
         this.velocity = new Vector2D();
     }
-    public void run(Player1P player1P){
+    public void run(Player1 player1){
         if (KeyboardInput.instance.aPressed) {
             this.velocity.x -= 10;
         }
@@ -23,13 +23,13 @@ public class Player1PMove {
         if (KeyboardInput.instance.dReleased) {
             this.velocity.x = 0;
         }
-        player1P.position.addUp(this.velocity);
+        player1.position.addUp(this.velocity);
 
-        this.inScreen(player1P);
+        this.inScreen(player1);
     }
 
-    public void inScreen(Player1P player1P) {
-        if (player1P.position.x <= 20) player1P.position.x = 20;
-        if (player1P.position.x >= 974) player1P.position.x = 974;
+    public void inScreen(Player1 player1) {
+        if (player1.position.x <= 20) player1.position.x = 20;
+        if (player1.position.x >= 974) player1.position.x = 974;
     }
 }
