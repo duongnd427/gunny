@@ -24,6 +24,13 @@ public class Player2PMove {
             this.velocity.x = 0;
         }
         player2P.position.addUp(this.velocity);
+
+        this.inScreen(player2P);
+    }
+
+    public void inScreen(Player2P player2P) {
+        if (player2P.position.x <= 20) player2P.position.x = 20;
+        if (player2P.position.x >= 1004) player2P.position.x = 1004;
     }
 
 }

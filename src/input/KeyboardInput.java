@@ -118,7 +118,6 @@ public class KeyboardInput implements KeyListener {
         }
         if (e.getKeyCode() == KeyEvent.VK_S){
             this.sReleased = true;
-
     }
 }
 }

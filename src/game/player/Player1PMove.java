@@ -23,6 +23,12 @@ public class Player1PMove {
             this.velocity.x = 0;
         }
         player1P.position.addUp(this.velocity);
+
+        this.inScreen(player1P);
     }
 
+    public void inScreen(Player1P player1P) {
+        if (player1P.position.x <= 20) player1P.position.x = 20;
+        if (player1P.position.x >= 1004) player1P.position.x = 1004;
+    }
 }
