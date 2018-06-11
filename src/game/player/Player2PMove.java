@@ -29,8 +29,8 @@ public class Player2PMove {
     }
 
     public void inScreen(Player2P player2P) {
-        if (player2P.position.x <= 20) player2P.position.x = 20;
-        if (player2P.position.x >= 1004) player2P.position.x = 1004;
+        if (player2P.position.x <= 15) player2P.position.x = 15;
+        if (player2P.position.x >= 984) player2P.position.x = 984;
     }
 
 }

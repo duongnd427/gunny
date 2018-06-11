@@ -12,7 +12,7 @@ public class Player2P extends GameObject {
     public Player2P(){
         this.position.set(950,500);
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("resources/images/player.png",40,40);
+        this.renderer = new ImageRenderer("resources/images/player2.png",150,150);
         this.player2PMove = new Player2PMove();
     }
 

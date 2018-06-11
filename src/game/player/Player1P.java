@@ -12,7 +12,7 @@ public class Player1P extends GameObject{
     public Player1P(){
         this.position.set(50,500);
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("resources/images/player.png",40,40);
+        this.renderer = new ImageRenderer("resources/images/player.png",150,100);
         this.player1PMove = new Player1PMove();
     }
 
