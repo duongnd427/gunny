@@ -17,6 +17,12 @@ public class Player2PMove {
         if (KeyboardInput.instance.rightPressed) {
             this.velocity.x += 10;
         }
+        if (KeyboardInput.instance.leftReleased) {
+            this.velocity.x = 0;
+        }
+        if (KeyboardInput.instance.rightReleased) {
+            this.velocity.x = 0;
+        }
         player2P.position.addUp(this.velocity);
     }
 

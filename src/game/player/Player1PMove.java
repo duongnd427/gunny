@@ -16,6 +16,11 @@ public class Player1PMove {
         }
         if (KeyboardInput.instance.aPressed) {
             this.velocity.x -= 10;
+        }if (KeyboardInput.instance.dReleased) {
+            this.velocity.x = 0;
+        }
+        if (KeyboardInput.instance.aReleased) {
+            this.velocity.x = 0;
         }
         player1P.position.addUp(this.velocity);
     }
