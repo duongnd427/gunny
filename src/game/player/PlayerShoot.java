@@ -6,21 +6,17 @@ import game.bullet.Bullet;
 import input.KeyboardInput;
 
 public class PlayerShoot {
-    public FrameCounter frameCounter = new FrameCounter(10);
+    private FrameCounter frameCounter = new FrameCounter(10);
     public PlayerShoot() {
     }
 
-    public void run(Player1 player1) {
+    public void run(Player player) {
         if (KeyboardInput.instance.spacePressed) {
-            if (this.frameCounter.run()) {
-                Bullet bulletPlayer = new Bullet();
-                bulletPlayer.position.set(player1.position);
-               // Vector2D rotate = player.player1Move.velocity.add
-                     //   (new Vector2D(2, 0).rotate(player.player1Move.angle));
-                bulletPlayer.velocity.set(3,-3);
-                GameObjectManager.instance.add(bulletPlayer);
-                this.frameCounter.reset();
-            }
+            Bullet bulletPlayer = new Bullet();
+            bulletPlayer.position.set(player.position);
+            bulletPlayer.velocity.set(3,-30);
+            GameObjectManager.instance.add(bulletPlayer);
+            this.frameCounter.reset();
         }
     }
 }

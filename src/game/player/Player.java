@@ -4,17 +4,17 @@ import base.GameObject;
 import base.Vector2D;
 import renderer.ImageRenderer;
 
-public class Player1 extends GameObject{
+public class Player extends GameObject{
 
     public Vector2D velocity;
-    public Player1Move player1Move;
+    public PlayerMove playerMove;
     public PlayerShoot playerShoot;
 
-    public Player1(){
-        this.position.set(50,500);
+    public Player(int x, int y, String path){
+        this.position.set(x,y);
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("resources/images/player.png",150,100);
-        this.player1Move = new Player1Move();
+        this.renderer = new ImageRenderer(path,160,140);
+        this.playerMove = new PlayerMove();
         this.playerShoot = new PlayerShoot();
     }
 
@@ -22,7 +22,8 @@ public class Player1 extends GameObject{
     public void run() {
         super.run();
         this.position.addUp(this.velocity);
-        this.player1Move.run(this);
+        this.playerMove.run(this);
         this.playerShoot.run(this);
+
     }
 }

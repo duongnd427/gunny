@@ -10,8 +10,8 @@ import renderer.ImageRenderer;
 public class Gift extends GameObject implements PhysicBody {
         public Boxcollider boxcollider;
     public Gift() {
-        this.renderer = new ImageRenderer("resources/images/Gift-icon.png", 30, 30);
-        this.boxcollider = new Boxcollider(30,30);
+        this.renderer = new ImageRenderer("resources/images/Gift-icon.png", 20, 20);
+        this.boxcollider = new Boxcollider(20,20);
     }
 
     @Override
