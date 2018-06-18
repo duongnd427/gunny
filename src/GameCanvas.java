@@ -2,6 +2,7 @@ import base.GameObjectManager;
 import game.background.Background;
 import game.gift.GiftSpawner;
 import game.player.Player;
+import game.viewFinder.ViewFinder;
 import input.KeyboardInput;
 
 
@@ -32,7 +33,7 @@ public class GameCanvas extends JPanel {
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
         GameObjectManager.instance.add(new GiftSpawner());
-//        GameObjectManager.instance.add(new Player());
+        GameObjectManager.instance.add(new ViewFinder());
         player1 = new Player(50, 500, "resources/images/player.png");
         player2 = new Player(850, 500, "resources/images/player2.png");
 //        GameObjectManager.instance.add(new ViewFinderSpawner());

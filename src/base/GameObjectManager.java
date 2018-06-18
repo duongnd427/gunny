@@ -1,5 +1,7 @@
 package base;
-import game.physic.Boxcollider;
+
+import game.player.Player;
+import game.physic.BoxCollider;
 import game.physic.PhysicBody;
 
 import java.awt.*;
@@ -39,14 +41,23 @@ public class GameObjectManager {
                 .forEach(gameObject -> gameObject.render(graphics));
     }
 
-    public <T extends GameObject> T checkCollision(Boxcollider boxCollider, Class<T> cls) {
+    public Player findPlayer() {
+        return (Player) this.list
+                .stream()
+                .filter(gameObject -> gameObject instanceof Player)
+                .findFirst()
+                .orElse(null);
+    }
+
+
+    public <T extends GameObject> T checkCollision(BoxCollider boxCollider, Class<T> cls) {
         return (T) this.list
                 .stream()
                 .filter(gameObject -> gameObject.isAlive)
                 .filter(gameObject -> cls.isInstance(gameObject))
                 .filter(gameObject -> gameObject instanceof PhysicBody)
                 .filter(gameObject -> {
-                    Boxcollider other = ((PhysicBody)gameObject).getBoxCollider();
+                    BoxCollider other = ((PhysicBody)gameObject).getBoxCollider();
                     return boxCollider.checkBoxCollider(other);
                 })
                 .findFirst()
@@ -72,5 +83,4 @@ public class GameObjectManager {
         }
         return object;
     }
-
 }

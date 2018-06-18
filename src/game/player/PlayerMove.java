@@ -10,7 +10,9 @@ public class PlayerMove {
     public PlayerMove(){
         this.velocity = new Vector2D();
     }
+
     public void run(Player player){
+
         if (KeyboardInput.instance.leftPressed) {
             this.velocity.x -= 10;
         }

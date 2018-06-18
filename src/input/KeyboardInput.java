@@ -76,18 +76,6 @@ public class KeyboardInput implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_SPACE){
             this.spacePressed = true;
         }
-        if (e.getKeyCode() == KeyEvent.VK_A){
-            this.aPressed = true;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_S){
-            this.sPressed = true;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_D){
-            this.dPressed = true;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_W){
-            this.wPressed = true;
-        }
 
     }
     @Override
@@ -107,17 +95,5 @@ public class KeyboardInput implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_SPACE){
             this.spaceReleased = true;
         }
-        if (e.getKeyCode() == KeyEvent.VK_W){
-            this.wReleased = true;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_A){
-            this.aReleased = true;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_D){
-            this.dReleased = true;
-        }
-        if (e.getKeyCode() == KeyEvent.VK_S){
-            this.sReleased = true;
     }
-}
 }
