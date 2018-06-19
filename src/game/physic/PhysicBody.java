@@ -4,7 +4,7 @@ import base.GameObject;
 
 public interface PhysicBody {
 
-    Boxcollider getBoxCollider();
+    BoxCollider getBoxCollider();
 
     void getHit(GameObject gameObject);
 }

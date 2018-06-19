@@ -19,7 +19,6 @@ public class GiftSpawner extends GameObject {
     public void run(){
         super.run();
         if (this.frameCounter.run()) {
-            // tao enemy
             Gift gift = GameObjectManager.instance.recycle(Gift.class);
             gift.position.set(this.random.nextInt(1024), this.random.nextInt(600));
             GameObjectManager.instance.add(gift);

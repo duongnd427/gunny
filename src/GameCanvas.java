@@ -1,3 +1,4 @@
+import base.GameObject;
 import base.GameObjectManager;
 import game.background.Background;
 import game.gift.GiftSpawner;
@@ -34,8 +35,9 @@ public class GameCanvas extends JPanel {
         GameObjectManager.instance.add(new Background());
         GameObjectManager.instance.add(new GiftSpawner());
         GameObjectManager.instance.add(new ViewFinder());
-        player1 = new Player(50, 500, "resources/images/player.png");
-        player2 = new Player(850, 500, "resources/images/player2.png");
+        GameObjectManager.instance.add(new Player());
+//        player1 = new Player(50, 500, "resources/images/player.png");
+//        player2 = new Player(850, 500, "resources/images/player2.png");
 //        GameObjectManager.instance.add(new ViewFinderSpawner());
     }
 
@@ -55,15 +57,15 @@ public class GameCanvas extends JPanel {
 
     public void runAll() {
         GameObjectManager.instance.runAll();
-        if (turn == 0) {
-            this.player1.run();
-            if (KeyboardInput.instance.spaceReleased)
-                turn = 1;
-        } else {
-            this.player2.run();
-            if (KeyboardInput.instance.spaceReleased)
-                turn = 0;
-        }
+//        if (turn == 0) {
+//            this.player1.run();
+//            if (KeyboardInput.instance.spaceReleased)
+//                turn = 1;
+//        } else {
+//            this.player2.run();
+//            if (KeyboardInput.instance.spaceReleased)
+//                turn = 0;
+//        }
         KeyboardInput.instance.reset();
     }
 
