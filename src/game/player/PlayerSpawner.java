@@ -14,16 +14,16 @@ public class PlayerSpawner extends GameObject {
     private int index = 0;
 
 
-    public PlayerSpawner() {
+    public PlayerSpawner(String path, int width, int height) {
 
-        this.players = new ArrayList<>();
-        Player player1 = GameObjectManager.instance.recycle(Player.class);
-        Player player2 = GameObjectManager.instance.recycle(Player.class);
-        players.add(player1);
-        players.add(player2);player1.position.set(50, 500);
-        player1.renderer = new ImageRenderer("resources/images/player.png", 160, 140);
-        player1.position.set(850, 500);
-        player1.renderer = new ImageRenderer("resources/images/player2.png", 160, 140);
+//        this.players = new ArrayList<>();
+//        Player player1 = GameObjectManager.instance.recycle(Player.class);
+//        Player player2 = GameObjectManager.instance.recycle(Player.class);
+//        players.add(player1);
+//        players.add(player2);player1.position.set(50, 500);
+        this.renderer = new ImageRenderer(path, 160, 140);
+        this.position.set(width, height);
+//        this.renderer = new ImageRenderer(path, 160, 140);
     }
 
     @Override
