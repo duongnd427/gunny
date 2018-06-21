@@ -18,7 +18,6 @@ public class Player extends GameObject{
         this.renderer = new ImageRenderer(path,100,80);
         this.playerMove = new PlayerMove();
         this.playerShoot = new PlayerShoot();
-        this.viewFinder = new ViewFinder();
     }
 
     public Player() {

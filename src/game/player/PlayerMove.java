@@ -6,11 +6,9 @@ import input.KeyboardInput;
 public class PlayerMove {
 
     public Vector2D velocity;
-    public PlayerShoot playerShoot;
 
     public PlayerMove(){
         this.velocity = new Vector2D();
-        this.playerShoot = new PlayerShoot();
     }
     public void run(Player player){
         if (KeyboardInput.instance.leftPressed) {
