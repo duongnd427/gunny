@@ -6,23 +6,17 @@ import game.bullet.Bullet;
 import input.KeyboardInput;
 
 public class PlayerShoot {
-
-    public int power = 0;
     private FrameCounter frameCounter = new FrameCounter(10);
     public PlayerShoot() {
     }
 
     public void run(Player player) {
         if (KeyboardInput.instance.spacePressed) {
-                this.power += 1;
-
-            }
-            if (KeyboardInput.instance.spaceReleased) {
                 Bullet bulletPlayer = new Bullet();
                 bulletPlayer.position.set(player.position);
-                bulletPlayer.velocity.set(20, -this.power);
+                bulletPlayer.velocity.set(3,-30);
                 GameObjectManager.instance.add(bulletPlayer);
-                this.power = 0;
+                this.frameCounter.reset();
         }
     }
 }

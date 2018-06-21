@@ -64,6 +64,7 @@ public class GameObjectManager {
                 .orElse(null);
     }
 
+
     public <T extends GameObject> T recycle(Class<T> cls) {
         T object = (T) this.list
                 .stream()
