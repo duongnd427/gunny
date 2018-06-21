@@ -1,8 +1,8 @@
 package base;
 
-import game.player.Player;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
+import game.player.Player;
 
 import java.awt.*;
 import java.util.ArrayList;

@@ -17,15 +17,6 @@ public class KeyboardInput implements KeyListener {
     public boolean downReleased;
     public boolean spacePressed;
     public boolean spaceReleased;
-    public boolean wPressed;
-    public boolean wReleased;
-    public boolean aPressed;
-    public boolean aReleased;
-    public boolean sPressed;
-    public boolean sReleased;
-    public boolean dPressed;
-    public boolean dReleased;
-
 
 
     private KeyboardInput(){
@@ -33,24 +24,17 @@ public class KeyboardInput implements KeyListener {
     }
 
     public  void reset() {
-        this.leftReleased = false;
         this.leftPressed = false;
         this.rightReleased = false;
         this.upReleased = false;
         this.spaceReleased = false;
+        this.leftReleased = false;
         this.rightPressed = false;
         this.upPressed = false;
         this.spacePressed = false;
         this.downPressed = false;
         this.downReleased = false;
-        this.wPressed = false;
-        this.wReleased = false;
-        this.aPressed = false;
-        this.aReleased = false;
-        this.sPressed = false;
-        this.sReleased = false;
-        this.dPressed = false;
-        this.dReleased = false;
+
 
     }
 

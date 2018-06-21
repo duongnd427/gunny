@@ -6,18 +6,18 @@ import input.KeyboardInput;
 public class PlayerMove {
 
     public Vector2D velocity;
+    public PlayerShoot playerShoot;
 
     public PlayerMove(){
         this.velocity = new Vector2D();
+        this.playerShoot = new PlayerShoot();
     }
-
     public void run(Player player){
-
         if (KeyboardInput.instance.leftPressed) {
-            this.velocity.x -= 10;
+            this.velocity.x -= 5;
         }
         if (KeyboardInput.instance.rightPressed) {
-            this.velocity.x += 10;
+            this.velocity.x += 5;
         }
         if (KeyboardInput.instance.leftReleased) {
             this.velocity.x = 0;
@@ -26,7 +26,6 @@ public class PlayerMove {
             this.velocity.x = 0;
         }
         player.position.addUp(this.velocity);
-
         this.inScreen(player);
     }
 

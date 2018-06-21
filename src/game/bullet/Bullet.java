@@ -26,7 +26,7 @@ public class Bullet extends GameObject implements PhysicBody {
     public void run(){
         super.run();
         this.boxCollider.position.set(this.position.x -10,this.position.y-7);
-        this.velocity.addUp(0,1);
+        this.velocity.addUp(0,1f);
         this.position.addUp(this.velocity);
         this.runHitObject.run(this);
         this.dieBullet();
