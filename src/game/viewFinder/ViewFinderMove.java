@@ -1,50 +1,34 @@
 package game.viewFinder;
 
-import base.GameObjectManager;
+import base.GameObject;
 import base.Vector2D;
-import game.player.Player;
 import input.KeyboardInput;
 
 public class ViewFinderMove {
-
     public double angle = 0.0;
-    private Vector2D velocity;
+    public Vector2D velocity;
 
     public ViewFinderMove() {
-        this.velocity = new Vector2D();
+        this.velocity = new Vector2D(0,-60);
     }
 
-    public void run(ViewFinder viewFinder) {
+    public void run(GameObject gameObject) {
 
-            if (KeyboardInput.instance.upPressed) {
-                this.velocity.set(2,0);
-                this.angle -= 15.0;
-            }
-            if (KeyboardInput.instance.downPressed) {
-                this.velocity.set(2,0);
-                this.angle += 15.0;
-            }
-            if (KeyboardInput.instance.upReleased) {
-                this.velocity.set(0,0);
-                this.angle = 0;
-            }
-            if (KeyboardInput.instance.downReleased) {
-                this.velocity.set(0,0);
-                this.angle = 0;
-            }
-            if (KeyboardInput.instance.leftPressed) {
-                this.velocity.x -= 10;
-            }
-            if (KeyboardInput.instance.rightPressed) {
-                this.velocity.x += 10;
-            }
-            if (KeyboardInput.instance.leftReleased) {
-                this.velocity.x = 0;
-            }
-            if (KeyboardInput.instance.rightReleased) {
-                this.velocity.x = 0;
-            }
-            viewFinder.position.addUp(this.velocity);
-
+        if (KeyboardInput.instance.upPressed) {
+            this.angle -= 1.0;
+        }
+        if (KeyboardInput.instance.downPressed) {
+            this.angle += 1.0;
+        }
+        if (KeyboardInput.instance.upReleased) {
+            this.angle = 0;
+        }
+        if (KeyboardInput.instance.downReleased) {
+            this.angle = 0;
+        }
+        Vector2D rotate = velocity.rotate(angle);
+        this.velocity.set(rotate);
+        gameObject.position.addUp(this.velocity);
     }
+
 }

@@ -21,7 +21,6 @@ public class GiftSpawner extends GameObject {
         if (this.frameCounter.run()) {
             Gift gift = GameObjectManager.instance.recycle(Gift.class);
             gift.position.set(this.random.nextInt(1024), this.random.nextInt(600));
-            GameObjectManager.instance.add(gift);
             this.frameCounter.reset();
         }
     }

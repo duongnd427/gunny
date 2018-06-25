@@ -1,3 +1,4 @@
+
 import input.KeyboardInput;
 
 import javax.swing.*;
@@ -43,7 +44,7 @@ public class GameWindow extends JFrame {
     public void gameLoop() {
         while (true) {
             long currentTime = System.nanoTime();
-            if (currentTime - this.lastTime >= 20_000_000) {
+            if (currentTime - this.lastTime >= 17_000_000) {
                 this.gameCanvas.runAll();
                 this.gameCanvas.renderAll();
                 this.lastTime = currentTime;

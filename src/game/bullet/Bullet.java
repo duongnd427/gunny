@@ -15,26 +15,26 @@ public class Bullet extends GameObject implements PhysicBody {
 
     public Bullet() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("resources/images/bullet.png",40,30);
-        this.boxCollider = new BoxCollider(40,30);
+        this.renderer = new ImageRenderer("resources/images/bullet.png",50,26);
+        this.boxCollider = new BoxCollider(25,25);
         this.runHitObject = new RunHitObject(
                 Gift.class
         );
     }
 
+    private void dieBullet() {
+        if (this.position.x < 0 || this.position.x > 1024 || this.position.y >600)
+            this.isAlive = false;
+    }
+
     @Override
     public void run(){
         super.run();
-        this.boxCollider.position.set(this.position.x -10,this.position.y-7);
-        this.velocity.addUp(0,1f);
+        this.velocity.addUp(0,1);
+        this.boxCollider.position.set(this.position.x -25,this.position.y-13);
         this.position.addUp(this.velocity);
-        this.runHitObject.run(this);
         this.dieBullet();
-    }
-
-    public void dieBullet() {
-        if (this.position.y > 600)
-            this.isAlive = false;
+        this.runHitObject.run(this);
     }
 
     @Override

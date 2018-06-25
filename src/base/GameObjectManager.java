@@ -1,8 +1,8 @@
 package base;
-
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
-import game.player.Player;
+import game.player.PlayerLeft;
+import game.player.PlayerRight;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -32,6 +32,7 @@ public class GameObjectManager {
                 .forEach(gameObject -> gameObject.run());
         this.list.addAll(this.tempList);
         this.tempList.clear();
+        System.out.println(list.size());
     }
 
     public void renderAll(Graphics graphics) {
@@ -40,15 +41,6 @@ public class GameObjectManager {
                 .filter(gameObject -> gameObject.isAlive)
                 .forEach(gameObject -> gameObject.render(graphics));
     }
-
-    public Player findPlayer() {
-        return (Player) this.list
-                .stream()
-                .filter(gameObject -> gameObject instanceof Player)
-                .findFirst()
-                .orElse(null);
-    }
-
 
     public <T extends GameObject> T checkCollision(BoxCollider boxCollider, Class<T> cls) {
         return (T) this.list
@@ -63,7 +55,6 @@ public class GameObjectManager {
                 .findFirst()
                 .orElse(null);
     }
-
 
     public <T extends GameObject> T recycle(Class<T> cls) {
         T object = (T) this.list
@@ -84,4 +75,24 @@ public class GameObjectManager {
         }
         return object;
     }
+
+
+    public GameObject findCharacter(String side) {
+        return (GameObject) this.list
+                .stream()
+                .filter(gameObject -> gameObject instanceof GameObject)
+                .filter(gameObject -> gameObject.side == side)
+                .findFirst()
+                .orElse(null);
+    }
+
+    public PlayerLeft findPlayerLeft(String side) {
+        return (PlayerLeft) this.list
+                .stream()
+                .filter(gameObject -> gameObject instanceof PlayerLeft)
+                .filter(gameObject -> gameObject.side == side)
+                .findFirst()
+                .orElse(null);
+    }
+
 }

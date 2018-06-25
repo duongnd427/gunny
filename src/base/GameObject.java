@@ -8,6 +8,7 @@ public class GameObject {
 
     public Vector2D position;
     public Renderer renderer;
+    public String side;
     public boolean isAlive = true;
 
     public GameObject() {
