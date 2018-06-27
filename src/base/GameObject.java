@@ -9,10 +9,12 @@ public class GameObject {
     public Vector2D position;
     public Renderer renderer;
     public String side;
+    public Vector2D velocity;
     public boolean isAlive = true;
 
     public GameObject() {
         this.position = new Vector2D();
+        this.velocity = new Vector2D();
     }
 
     public void render(Graphics graphics) {

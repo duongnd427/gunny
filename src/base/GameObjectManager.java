@@ -95,4 +95,13 @@ public class GameObjectManager {
                 .orElse(null);
     }
 
+    public PlayerRight findPlayerRight(String side) {
+        return (PlayerRight) this.list
+                .stream()
+                .filter(gameObject -> gameObject instanceof PlayerRight)
+                .filter(gameObject -> gameObject.side == side)
+                .findFirst()
+                .orElse(null);
+    }
+
 }

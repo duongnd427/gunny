@@ -3,6 +3,8 @@ import game.background.Background;
 import game.gift.GiftSpawner;
 import game.player.PlayerLeft;
 import game.player.PlayerRight;
+import game.viewFinder.ViewFinderLeft;
+import game.viewFinder.ViewFinderRight;
 import input.KeyboardInput;
 
 
@@ -31,6 +33,12 @@ public class GameCanvas extends JPanel {
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());
         GameObjectManager.instance.add(new GiftSpawner());
+        this.setupPlayer();
+        GameObjectManager.instance.add(new ViewFinderLeft());
+        GameObjectManager.instance.add(new ViewFinderRight());
+    }
+
+    private void setupPlayer() {
         GameObjectManager.instance.add(new PlayerLeft());
         GameObjectManager.instance.add(new PlayerRight());
     }

@@ -2,7 +2,6 @@ package game.player;
 
 import base.GameObject;
 import constant.Constant;
-import game.viewFinder.ViewFinderSpawner;
 import input.KeyboardInput;
 import renderer.ImageRenderer;
 
@@ -17,7 +16,6 @@ public class PlayerRight extends GameObject {
     @Override
     public void run() {
         if (Constant.turn == 1) {
-            ViewFinderSpawner.instance.createViewFinderRight(this);
             PlayerManager.instance.shoot(this);
             PlayerManager.instance.move(this);
             if (KeyboardInput.instance.spaceReleased)
