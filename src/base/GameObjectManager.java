@@ -3,6 +3,7 @@ import game.physic.BoxCollider;
 import game.physic.PhysicBody;
 import game.player.PlayerLeft;
 import game.player.PlayerRight;
+import game.viewFinder.ViewFinderLeft;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -104,5 +105,13 @@ public class GameObjectManager {
                 .orElse(null);
     }
 
+    public ViewFinderLeft findViewFinderLeft(String side) {
+        return (ViewFinderLeft) this.list
+                .stream()
+                .filter(gameObject -> gameObject instanceof ViewFinderLeft)
+                .filter(gameObject -> gameObject.side == side)
+                .findFirst()
+                .orElse(null);
+    }
 
 }
