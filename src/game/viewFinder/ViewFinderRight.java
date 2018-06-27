@@ -8,12 +8,10 @@ import renderer.ImageRenderer;
 
 public class ViewFinderRight extends GameObject {
 
-    public ViewFinderMove viewFinderMove;
 
     public ViewFinderRight() {
-        this.velocity = new Vector2D();
+        this.side = "right";
         this.renderer = new ImageRenderer("resources/images/circle.png", 20, 20);
-        viewFinderMove = new ViewFinderMove();
     }
 
     @Override
@@ -24,7 +22,7 @@ public class ViewFinderRight extends GameObject {
             this.position.set(playerRight.position.add(this.velocity));
             this.velocity.set(playerRight.position.subtract(this.position));
         }
-        viewFinderMove.run(this);
-        this.position.addUp(velocity);
+        ViewFinderMove.instance.move(this);
+        this.position.addUp(this.velocity);
     }
 }

@@ -68,7 +68,6 @@ public class KeyboardInput implements KeyListener {
             this.spacePressed = true;
         }
 
-
     }
     @Override
     public void keyReleased(KeyEvent e){
@@ -84,6 +83,7 @@ public class KeyboardInput implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_DOWN){
             this.downReleased = true;
         }
+
         if (e.getKeyCode() == KeyEvent.VK_SPACE){
             this.spaceReleased = true;
         }

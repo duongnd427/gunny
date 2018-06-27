@@ -14,6 +14,7 @@ public class PlayerManager extends GameObject {
     private Vector2D velocity;
     private FrameCounter frameCounter;
     private int power = 0;
+    private double angle = 0.0;
 
     private PlayerManager() {
         this.velocity = new Vector2D();
@@ -57,6 +58,5 @@ public class PlayerManager extends GameObject {
             this.power = 0;
         }
     }
-
 }
 
