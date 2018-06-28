@@ -16,12 +16,23 @@ public class GiftSpawner extends GameObject {
     }
 
     @Override
-    public void run(){
+    public void run() {
         super.run();
+        int auto = random.nextInt(3);
         if (this.frameCounter.run()) {
-            Gift gift = GameObjectManager.instance.recycle(Gift.class);
-            gift.position.set(this.random.nextInt(1024), this.random.nextInt(600));
+            if (auto == 0) {
+                Gift gift = GameObjectManager.instance.recycle(Gift.class);
+                gift.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);
+            } else if (auto == 1) {
+                GiftExactly giftExactly = GameObjectManager.instance.recycle(GiftExactly.class);
+                giftExactly.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);
+            } else if (auto == 2) {
+                GiftTriple giftTriple = GameObjectManager.instance.recycle(GiftTriple.class);
+                giftTriple.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);
+            }
+
             this.frameCounter.reset();
         }
     }
+
 }

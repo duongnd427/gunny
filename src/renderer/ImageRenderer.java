@@ -14,7 +14,7 @@ public class ImageRenderer implements Renderer {
     private int width;
     private int height;
 
-    public ImageRenderer(String path , int width, int height) {
+    public ImageRenderer(String path, int width, int height) {
         this.image = this.loadImage(path);
         this.width = width;
         this.height = height;
@@ -31,8 +31,8 @@ public class ImageRenderer implements Renderer {
     }
 
     @Override
-    public void render(Graphics graphics, Vector2D position)  {
-        graphics.drawImage(this.image, (int)position.x - this.width/2, (int)position.y - this.height/2, this.width, this.height, null);
+    public void render(Graphics graphics, Vector2D position) {
+        graphics.drawImage(this.image, (int) position.x - this.width / 2, (int) position.y - this.height / 2, this.width, this.height, null);
 
     }
 }

@@ -11,22 +11,19 @@ public class ViewFinderMove {
     private double angle = 0.0;
 
     private ViewFinderMove() {
-        this.velocity = new Vector2D(0,-50);
+        this.velocity = new Vector2D(0, -50);
     }
 
 
     public void move(GameObject gameObject) {
         if (KeyboardInput.instance.upPressed) {
             this.angle -= 1.0;
-            System.out.println("upPressed");
         }
         if (KeyboardInput.instance.downPressed) {
             this.angle += 1.0;
-            System.out.println("downPressed");
         }
         if (KeyboardInput.instance.upReleased) {
             this.angle = 0;
-            System.out.println("upRe");
         }
         if (KeyboardInput.instance.downReleased) {
             this.angle = 0;

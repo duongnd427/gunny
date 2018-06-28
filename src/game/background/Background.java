@@ -3,7 +3,6 @@ package game.background;
 import base.GameObject;
 import renderer.BackgroundRenderer;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class Background extends GameObject {

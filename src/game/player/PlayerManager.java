@@ -46,7 +46,7 @@ public class PlayerManager extends GameObject {
 
     public void shoot(GameObject gameObject) {
         if (KeyboardInput.instance.spacePressed) {
-                this.power += 1;
+            this.power += 1;
         }
 
         if (KeyboardInput.instance.spaceReleased) {
@@ -54,7 +54,7 @@ public class PlayerManager extends GameObject {
             ViewFinderLeft viewFinderLeft = GameObjectManager.instance.findViewFinderLeft("left");
             PlayerLeft playerLeft = GameObjectManager.instance.findPlayerLeft("left");
             bulletPlayer.position.set(gameObject.position.add(viewFinderLeft.position.subtract(playerLeft.position)));
-            bulletPlayer.velocity.set((viewFinderLeft.position.subtract(playerLeft.position)).multiply((power/20)));
+            bulletPlayer.velocity.set((viewFinderLeft.position.subtract(playerLeft.position)).multiply((power / 20)));
             this.power = 0;
         }
     }

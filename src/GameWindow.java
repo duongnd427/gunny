@@ -1,4 +1,3 @@
-
 import input.KeyboardInput;
 
 import javax.swing.*;
@@ -7,8 +6,9 @@ import java.awt.event.WindowEvent;
 
 public class GameWindow extends JFrame {
 
-    GameCanvas gameCanvas;
     public long lastTime = 0;
+    GameCanvas gameCanvas;
+
     public GameWindow() {
         this.setSize(1024, 600); // set size window
         this.setupGameCanvas();
@@ -26,6 +26,7 @@ public class GameWindow extends JFrame {
         this.windowEvent();
         this.keyboardEvent();
     }
+
     private void keyboardEvent() {
         this.addKeyListener(KeyboardInput.instance);
     }

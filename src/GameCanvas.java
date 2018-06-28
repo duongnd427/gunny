@@ -5,7 +5,6 @@ import game.player.PlayerLeft;
 import game.player.PlayerRight;
 import input.KeyboardInput;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;

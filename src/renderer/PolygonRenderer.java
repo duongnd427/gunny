@@ -8,9 +8,9 @@ import java.util.List;
 
 public class PolygonRenderer implements Renderer {
 
+    public double angle = 0.0;
     private List<Vector2D> verties;
     private Polygon polygon;
-    public double angle = 0.0;
     private Color color;
 
     public PolygonRenderer(Color color, Vector2D... verties) { //base.Vector2D[]

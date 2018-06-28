@@ -1,10 +1,8 @@
 package game.player;
 
 import base.GameObject;
-
 import base.GameObjectManager;
 import constant.Constant;
-
 import game.viewFinder.ViewFinderLeft;
 import input.KeyboardInput;
 import renderer.ImageRenderer;

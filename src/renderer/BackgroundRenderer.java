@@ -4,7 +4,7 @@ import base.Vector2D;
 
 import java.awt.*;
 
-public class BackgroundRenderer implements Renderer{
+public class BackgroundRenderer implements Renderer {
     private int width;
     private int height;
     private Color color;

@@ -62,8 +62,8 @@
       <file leaf-file-name="GameObjectManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="83" column="56" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
+            <state relative-caret-position="220">
+              <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -80,7 +80,7 @@
       <file leaf-file-name="ViewFinderRight.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderRight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="340">
               <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
             </state>
           </provider>
@@ -271,7 +271,7 @@
       <workItem from="1529548363445" duration="486000" />
       <workItem from="1529950679615" duration="177000" />
       <workItem from="1530021730140" duration="81000" />
-      <workItem from="1530064197255" duration="5256000" />
+      <workItem from="1530064197255" duration="6066000" />
     </task>
     <task id="LOCAL-00001" summary="findPlayer = null">
       <created>1530070827133</created>
@@ -287,15 +287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530101170275</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ok2">
+      <created>1530122167723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530122167723</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6000000" />
+    <option name="totallyTimeSpent" value="6810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -306,8 +312,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32673267" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32673267" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32673267" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -336,7 +342,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="findPlayer = null" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="ok2" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
@@ -580,8 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="83" column="56" selection-start-line="83" selection-start-column="56" selection-end-line="83" selection-end-column="56" />
+        <state relative-caret-position="220">
+          <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -615,7 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderRight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="340">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
