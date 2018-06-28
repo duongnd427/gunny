@@ -1,9 +1,9 @@
 package game.player;
 
-import base.FrameCounter;
 import base.GameObject;
 import base.GameObjectManager;
 import base.Vector2D;
+import constant.Constant;
 import game.bullet.Bullet;
 import game.viewFinder.ViewFinderLeft;
 import input.KeyboardInput;
@@ -13,12 +13,9 @@ public class PlayerManager extends GameObject {
     public static PlayerManager instance = new PlayerManager();
 
     private Vector2D velocity;
-    private FrameCounter frameCounter;
-    private float power = 0;
 
     private PlayerManager() {
         this.velocity = new Vector2D();
-//        this.frameCounter = new FrameCounter(5);
     }
 
     public void move(GameObject gameObject) {
@@ -46,7 +43,10 @@ public class PlayerManager extends GameObject {
 
     public void shoot(GameObject gameObject) {
         if (KeyboardInput.instance.spacePressed) {
-            this.power += 1;
+            Constant.pow += 1;
+            if (Constant.pow == 121) {
+                Constant.pow = 5;
+            }
         }
 
         if (KeyboardInput.instance.spaceReleased) {
@@ -54,8 +54,8 @@ public class PlayerManager extends GameObject {
             ViewFinderLeft viewFinderLeft = GameObjectManager.instance.findViewFinderLeft("left");
             PlayerLeft playerLeft = GameObjectManager.instance.findPlayerLeft("left");
             bulletPlayer.position.set(gameObject.position.add(viewFinderLeft.position.subtract(playerLeft.position)));
-            bulletPlayer.velocity.set((viewFinderLeft.position.subtract(playerLeft.position)).multiply((power / 20)));
-            this.power = 0;
+            bulletPlayer.velocity.set((viewFinderLeft.position.subtract(playerLeft.position)).normalize().multiply((Constant.pow / 2)));
+            Constant.pow = 0;
         }
     }
 }

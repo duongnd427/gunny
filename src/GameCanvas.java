@@ -3,6 +3,7 @@ import game.background.Background;
 import game.gift.GiftSpawner;
 import game.player.PlayerLeft;
 import game.player.PlayerRight;
+import game.player.Power;
 import input.KeyboardInput;
 
 import javax.swing.*;
@@ -32,6 +33,7 @@ public class GameCanvas extends JPanel {
         GameObjectManager.instance.add(new GiftSpawner());
         GameObjectManager.instance.add(new PlayerLeft());
         GameObjectManager.instance.add(new PlayerRight());
+        GameObjectManager.instance.add(new Power());
     }
 
 
