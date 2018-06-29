@@ -34,7 +34,6 @@ public class GameObjectManager {
                 .forEach(gameObject -> gameObject.run());
         this.list.addAll(this.tempList);
         this.tempList.clear();
-        System.out.println(list.size());
     }
 
     public void renderAll(Graphics graphics) {
@@ -122,5 +121,10 @@ public class GameObjectManager {
                 .filter(gameObject -> gameObject.side == side)
                 .findFirst()
                 .orElse(null);
+    }
+
+    public void clear() {
+        this.list.clear();
+        this.tempList.clear();
     }
 }

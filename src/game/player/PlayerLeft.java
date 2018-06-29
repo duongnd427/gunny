@@ -4,11 +4,15 @@ import base.FrameCounter;
 import base.GameObject;
 import base.GameObjectManager;
 import constant.Constant;
+import game.bullet.Bullet;
+import game.bullet.BulletExactly;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
 import game.viewFinder.ViewFinderLeft;
 import input.KeyboardInput;
 import renderer.ImageRenderer;
+import scene.GameOverScene;
+import scene.SceneManager;
 
 
 public class PlayerLeft extends GameObject implements PhysicBody {
@@ -20,7 +24,7 @@ public class PlayerLeft extends GameObject implements PhysicBody {
 
 
     public PlayerLeft() {
-        this.position.set(50, 450);
+        this.position.set(100, 50);
         this.side = "left";
         this.renderer = new ImageRenderer("resources/images/player.png", 70, 50);
         this.boxCollider = new BoxCollider(70, 50);
@@ -29,6 +33,14 @@ public class PlayerLeft extends GameObject implements PhysicBody {
 
     @Override
     public void run() {
+        if (Constant.turn == 3) {
+            viewFinderLeft.isAlive = false;
+            if (this.position.y > 450)
+                Constant.turn = 0;
+            else this.position.y += 5;
+
+        }
+
         if (Constant.turn == 0) {
             viewFinderLeft.isAlive = true;
             viewFinderLeft.run();
@@ -51,7 +63,12 @@ public class PlayerLeft extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
-
+        if (gameObject instanceof Bullet)
+            this.isAlive = false;
+        if (gameObject instanceof BulletExactly)
+            this.isAlive = false;
+        if (this.isAlive == false)
+            SceneManager.instance.changeScene(new GameOverScene());
     }
 
 }

@@ -5,6 +5,9 @@ import game.player.PlayerLeft;
 import game.player.PlayerRight;
 import game.player.Power;
 import input.KeyboardInput;
+import input.MouseInput;
+import scene.GameStartScene;
+import scene.SceneManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +22,8 @@ public class GameCanvas extends JPanel {
     public GameCanvas() {
         this.setSize(1024, 600);
         this.setupBackBuffered();
-        this.setupCharacter();
+//        this.setupCharacter();
+        SceneManager.instance.changeScene(new GameStartScene());
         this.setVisible(true);
     }
 
@@ -28,13 +32,13 @@ public class GameCanvas extends JPanel {
         this.graphics = this.backBuffered.getGraphics();
     }
 
-    private void setupCharacter() {
-        GameObjectManager.instance.add(new Background());
-        GameObjectManager.instance.add(new GiftSpawner());
-        GameObjectManager.instance.add(new PlayerLeft());
-        GameObjectManager.instance.add(new PlayerRight());
-        GameObjectManager.instance.add(new Power());
-    }
+//    private void setupCharacter() {
+//        GameObjectManager.instance.add(new Background());
+//        GameObjectManager.instance.add(new GiftSpawner());
+//        GameObjectManager.instance.add(new PlayerLeft());
+//        GameObjectManager.instance.add(new PlayerRight());
+//        GameObjectManager.instance.add(new Power());
+//    }
 
 
     @Override
@@ -51,6 +55,8 @@ public class GameCanvas extends JPanel {
     public void runAll() {
         GameObjectManager.instance.runAll();
         KeyboardInput.instance.reset();
+        MouseInput.instance.reset();
+        SceneManager.instance.performChangeSceneIfNeeded();
     }
 
 }

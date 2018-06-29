@@ -18,7 +18,7 @@ public class PlayerRight extends GameObject implements PhysicBody {
 
     public PlayerRight() {
         this.side = "right";
-        this.position.set(850, 450);
+        this.position.set(900, 50);
         this.renderer = new ImageRenderer("resources/images/player2.png", 60, 50);
         viewFinderRight = GameObjectManager.instance.recycle(ViewFinderRight.class);
         this.boxCollider = new BoxCollider(60, 50);
@@ -27,6 +27,12 @@ public class PlayerRight extends GameObject implements PhysicBody {
 
     @Override
     public void run() {
+        viewFinderRight.isAlive = false;
+        if (this.position.y <= 450) {
+            this.position.y += 5;
+
+        }
+
         if (Constant.turn == 1) {
             viewFinderRight.isAlive = true;
             viewFinderRight.run();
