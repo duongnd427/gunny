@@ -8,6 +8,8 @@ import game.gift.GiftTriple;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
 import game.physic.RunHitObject;
+import game.player.PlayerLeft;
+import game.player.PlayerRight;
 import renderer.ImageRenderer;
 
 public class BulletExactly extends GameObject implements PhysicBody {
@@ -23,7 +25,9 @@ public class BulletExactly extends GameObject implements PhysicBody {
         this.runHitObject = new RunHitObject(
                 Gift.class,
                 GiftTriple.class,
-                GiftExactly.class
+                GiftExactly.class,
+                PlayerLeft.class,
+                PlayerRight.class
         );
     }
 
@@ -50,6 +54,12 @@ public class BulletExactly extends GameObject implements PhysicBody {
             this.isAlive = false;
         }
         if (gameObject instanceof Gift) {
+            this.isAlive = false;
+        }
+        if (gameObject instanceof PlayerLeft) {
+            this.isAlive = false;
+        }
+        if (gameObject instanceof PlayerRight) {
             this.isAlive = false;
         }
     }

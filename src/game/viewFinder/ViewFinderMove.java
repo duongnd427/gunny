@@ -11,7 +11,7 @@ public class ViewFinderMove {
     private double angle = 0.0;
 
     private ViewFinderMove() {
-        this.velocity = new Vector2D(0, -50);
+        this.velocity = new Vector2D(0, -70);
     }
 
 

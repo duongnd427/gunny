@@ -22,7 +22,7 @@ public class GiftSpawner extends GameObject {
         if (this.frameCounter.run()) {
             if (auto == 0) {
                 Gift gift = GameObjectManager.instance.recycle(Gift.class);
-                gift.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);
+                gift.position.set(this.random.nextInt(800) + 100, this.random.nextInt(300) + 50);
             } else if (auto == 1) {
                 GiftExactly giftExactly = GameObjectManager.instance.recycle(GiftExactly.class);
                 giftExactly.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);

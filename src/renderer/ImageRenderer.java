@@ -33,6 +33,5 @@ public class ImageRenderer implements Renderer {
     @Override
     public void render(Graphics graphics, Vector2D position) {
         graphics.drawImage(this.image, (int) position.x - this.width / 2, (int) position.y - this.height / 2, this.width, this.height, null);
-
     }
 }
