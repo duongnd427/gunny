@@ -20,21 +20,22 @@ public class PlayerManager extends GameObject {
     }
 
     public void move(GameObject gameObject) {
-        if (KeyboardInput.instance.leftPressed) {
-            this.velocity.x -= 10;
+        if (Constant.countMove != 3) {
+            if (KeyboardInput.instance.leftPressed) {
+                this.velocity.x -= 10;
+            }
+            if (KeyboardInput.instance.rightPressed) {
+                this.velocity.x += 10;
+            }
+            if (KeyboardInput.instance.leftReleased) {
+                this.velocity.x = 0;Constant.countMove += 1;
+            }
+            if (KeyboardInput.instance.rightReleased) {
+                this.velocity.x = 0;Constant.countMove += 1;
+            }
+            gameObject.position.addUp(this.velocity);
+            this.inScreen(gameObject);
         }
-        if (KeyboardInput.instance.rightPressed) {
-            this.velocity.x += 10;
-        }
-        if (KeyboardInput.instance.leftReleased) {
-            this.velocity.x = 0;
-        }
-        if (KeyboardInput.instance.rightReleased) {
-            this.velocity.x = 0;
-        }
-        gameObject.position.addUp(this.velocity);
-
-        this.inScreen(gameObject);
     }
 
     private void inScreen(GameObject gameObject) {
@@ -63,7 +64,6 @@ public class PlayerManager extends GameObject {
                 bulletPlayer.position.set(gameObject.position.add(viewFinderRight.position.subtract(playerRight.position)));
                 bulletPlayer.velocity.set((viewFinderRight.position.subtract(playerRight.position)).normalize().multiply((Constant.pow / 2)));
             }
-            System.out.println(bulletPlayer.velocity.x + " " + bulletPlayer.velocity.y + " " + bulletPlayer.velocity.length());
             Constant.pow = 0;
         }
     }

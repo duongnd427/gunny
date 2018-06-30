@@ -19,7 +19,7 @@ public class PowerRenderer implements Renderer {
     public void render(Graphics graphics, Vector2D position) {
         graphics.setColor(this.color);
         graphics.fillRect(200, 520, this.width, this.height);
-        graphics.setColor(Color.lightGray);
+        graphics.setColor(Color.blue);
         graphics.drawRect(200, 520, 600, 30);
     }
 }

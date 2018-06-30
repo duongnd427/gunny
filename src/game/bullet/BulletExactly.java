@@ -4,6 +4,7 @@ import base.GameObject;
 import base.Vector2D;
 import game.gift.Gift;
 import game.gift.GiftExactly;
+import game.gift.GiftLive;
 import game.gift.GiftTriple;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
@@ -27,7 +28,8 @@ public class BulletExactly extends GameObject implements PhysicBody {
                 GiftTriple.class,
                 GiftExactly.class,
                 PlayerLeft.class,
-                PlayerRight.class
+                PlayerRight.class,
+                GiftLive.class
         );
     }
 
@@ -47,21 +49,9 @@ public class BulletExactly extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
-        if (gameObject instanceof GiftExactly) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof GiftTriple) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof Gift) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof PlayerLeft) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof PlayerRight) {
-            this.isAlive = false;
-        }
+        this.isAlive = false;
+        ExplosionSpawner.instance.explosion(this);
+
     }
 
     @Override

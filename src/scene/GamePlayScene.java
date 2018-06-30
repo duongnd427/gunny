@@ -6,15 +6,23 @@ import game.gift.GiftSpawner;
 import game.player.PlayerLeft;
 import game.player.PlayerRight;
 import game.player.Power;
+import utils.Utils;
+
+import javax.sound.sampled.Clip;
 
 public class GamePlayScene implements Scene {
+    private Clip clip;
     @Override
     public void init() {
         this.setupCharacter();
+        this.clip = Utils.loadAudio("resources/audio/gamePlay.wav");
+        this.clip.start();
+        this.clip.loop(-1);
     }
     @Override
     public void deinit() {
         GameObjectManager.instance.clear();
+        this.clip.stop();
     }
     private void setupCharacter() {
         GameObjectManager.instance.add(new Background());

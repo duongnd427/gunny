@@ -19,8 +19,8 @@ public class Bullet extends GameObject implements PhysicBody {
 
     public Bullet() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("resources/images/bullet.png", 50, 26);
-        this.boxCollider = new BoxCollider(50, 26);
+        this.renderer = new ImageRenderer("resources/images/bullet.png", 30, 16);
+        this.boxCollider = new BoxCollider(30, 16);
         this.runHitObject = new RunHitObject(
                 Gift.class,
                 GiftTriple.class,
@@ -39,7 +39,7 @@ public class Bullet extends GameObject implements PhysicBody {
     public void run() {
         super.run();
         this.velocity.addUp(0, 1);
-        this.boxCollider.position.set(this.position.x - 25, this.position.y - 13);
+        this.boxCollider.position.set(this.position.x - 15, this.position.y - 8);
         this.position.addUp(this.velocity);
         this.dieBullet();
         this.runHitObject.run(this);
@@ -47,21 +47,8 @@ public class Bullet extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
-        if (gameObject instanceof GiftExactly) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof GiftTriple) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof Gift) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof PlayerLeft) {
-            this.isAlive = false;
-        }
-        if (gameObject instanceof PlayerRight) {
-            this.isAlive = false;
-        }
+        this.isAlive = false;
+        ExplosionSpawner.instance.explosion(this);
     }
 
     @Override

@@ -5,8 +5,12 @@ import input.MouseInput;
 import renderer.ImageRenderer;
 import scene.GamePlayScene;
 import scene.SceneManager;
+import utils.Utils;
+
+import javax.sound.sampled.Clip;
 
 public class StartButton extends GameObject {
+    private Clip clip;
     public StartButton(){
         this.position.set(500,350);
         this.renderer = new ImageRenderer("resources/images/Play-Button.png",130,130);
