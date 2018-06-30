@@ -3,9 +3,7 @@ package scene;
 import base.GameObjectManager;
 import game.background.Background;
 import game.gift.GiftSpawner;
-import game.player.PlayerLeft;
-import game.player.PlayerRight;
-import game.player.Power;
+import game.player.*;
 import utils.Utils;
 
 import javax.sound.sampled.Clip;
@@ -30,6 +28,8 @@ public class GamePlayScene implements Scene {
         GameObjectManager.instance.add(new PlayerLeft());
         GameObjectManager.instance.add(new PlayerRight());
         GameObjectManager.instance.add(new Power());
+        GameObjectManager.instance.add(new HpLeft());
+        GameObjectManager.instance.add(new HpRight());
     }
 
 }

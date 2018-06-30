@@ -21,7 +21,7 @@ public class PlayerLeft extends GameObject implements PhysicBody {
     private ViewFinderLeft viewFinderLeft;
     private FrameCounter frameCounter = new FrameCounter(1800);
     public BoxCollider boxCollider;
-    private int live = 5;
+    public int live = 5;
 
 
 
