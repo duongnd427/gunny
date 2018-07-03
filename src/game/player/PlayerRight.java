@@ -4,39 +4,65 @@ import base.FrameCounter;
 import base.GameObject;
 import base.GameObjectManager;
 import constant.Constant;
-import game.gift.GiftTriple;
+import game.gift.GiftLive;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
+import game.physic.RunHitObject;
 import game.viewFinder.ViewFinderRight;
 import input.KeyboardInput;
+import platform.Platform;
 import renderer.ImageRenderer;
-import scene.GameOverScene;
+import scene.PlayerLeftWinScene;
 import scene.SceneManager;
+
+import java.awt.*;
 
 public class PlayerRight extends GameObject implements PhysicBody {
 
+    private FrameCounter delay = new FrameCounter(10);
+    private FrameCounter timeDelay = new FrameCounter(100);
     private FrameCounter frameCounter = new FrameCounter(1800);
+    private boolean isAnimation = false;
     public BoxCollider boxCollider;
     private ViewFinderRight viewFinderRight;
-    public int live = 5;
+    private RunHitObject runHitObject;
+    private float GRAVITY = 0.05f;
+    public int live = 6;
+
 
     public PlayerRight() {
         this.side = "right";
-        this.position.set(900, 450);
-        this.renderer = new ImageRenderer("resources/images/player2.png", 40, 40);
+        this.position.set(900, 0);
+        this.renderer = new ImageRenderer("resources/images/player2.png", 60, 60);
         viewFinderRight = GameObjectManager.instance.recycle(ViewFinderRight.class);
-        this.boxCollider = new BoxCollider(40, 40);
+        this.boxCollider = new BoxCollider(50, 60);
         viewFinderRight.isAlive = false;
+        this.runHitObject = new RunHitObject(
+                Platform.class
+        );
     }
 
     @Override
     public void run() {
+        if (isAnimation) {
+            if (timeDelay.run()) {
+                timeDelay.reset();
+                isAnimation = false;
+            }
+        }
         viewFinderRight.isAlive = false;
+        this.velocity.y += GRAVITY;
+        moveVertica();
+        this.runHitObject.run(this);
+        this.position.addUp(velocity);
 
+        this.boxCollider.position.set(this.position.x - 25, this.position.y - 30);
         if (Constant.turn == 1) {
                 viewFinderRight.isAlive = true;
                 viewFinderRight.run();
-                this.boxCollider.position.set(this.position.x - 20, this.position.y - 20);
+            if (this.position.y > 600){
+                SceneManager.instance.changeScene(new PlayerLeftWinScene());
+            }
                 PlayerManager.instance.shoot(this);
                 PlayerManager.instance.move(this);
                 if (KeyboardInput.instance.spaceReleased || frameCounter.run()) {
@@ -51,20 +77,47 @@ public class PlayerRight extends GameObject implements PhysicBody {
     }
 
     @Override
+    public void render(Graphics graphics) {
+        if (isAnimation) {
+            if (delay.run()){
+                delay.reset();
+                return;
+            }
+        }
+        super.render(graphics);
+    }
+
+    private void moveVertica() {
+
+        BoxCollider nextBoxCollider = boxCollider.shift(0,velocity.y);
+
+        Platform platform = GameObjectManager.instance.checkCollision(nextBoxCollider, Platform.class);
+        if(platform != null){
+            velocity.y = 0;
+        }
+    }
+
+    @Override
     public BoxCollider getBoxCollider() {
         return this.boxCollider;
     }
 
     @Override
     public void getHit(GameObject gameObject) {
-        if (gameObject instanceof GiftTriple) {
-            this.live += 2;
-        } else {
+        if (gameObject instanceof GiftLive) {
+            if(this.live < 4){
+                this.live += 2;
+            }else if(this.live == 4){
+                this.live += 1;
+            }
+        }
+        else {
             this.live -= 1;
+            if (this.live < 5) this.isAnimation = true;
         }
         if (this.live == 0) {
             this.isAlive = false;
-            SceneManager.instance.changeScene(new GameOverScene());
+            SceneManager.instance.changeScene(new PlayerLeftWinScene());
         }
     }
 }

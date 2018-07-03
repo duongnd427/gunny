@@ -16,9 +16,8 @@ public class GameStartScene implements Scene {
         GameObjectManager.instance.add(new Background());
         GameObjectManager.instance.recycle(TextStart.class);
         GameObjectManager.instance.add(new StartButton());
-        this.clip = Utils.loadAudio("resources/audio/gameStart.wav");
+        this.clip = Utils.loadAudio("resources/audio/gamestart.wav");
         this.clip.start();
-        this.clip.loop(-1);
     }
 
     @Override

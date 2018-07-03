@@ -3,6 +3,9 @@ package game.bullet;
 import base.GameObject;
 import base.GameObjectManager;
 import base.Vector2D;
+import constant.Constant;
+import game.bullet.bulletLeft.BulletLeft;
+import game.bullet.bulletRight.BulletRight;
 import renderer.ImageRenderer;
 
 import java.util.Random;
@@ -27,5 +30,26 @@ public class ExplosionSpawner extends GameObject {
                 explosion.run();
             }
         }
+    }
+
+    public void explosionDiePlayer (GameObject gameObject){
+        for (double angle = -180.0; angle <= 0.0; angle += 10.0) {
+            if (Constant.turn == 1) {
+                BulletLeft bulletLeft = GameObjectManager.instance.recycle(BulletLeft.class);
+                bulletLeft.position.set(gameObject.position);
+                bulletLeft.velocity.set(
+                        (new Vector2D(50, 0)).rotate(angle));
+                GameObjectManager.instance.add(bulletLeft);
+            } else if (Constant.turn == 0) {
+                BulletRight bulletRight = GameObjectManager.instance.recycle(BulletRight.class);
+                bulletRight.position.set(gameObject.position);
+                bulletRight.velocity.set(
+                        (new Vector2D(50, 0)).rotate(angle));
+                GameObjectManager.instance.add(bulletRight);
+            }
+
+        }
+
+
     }
 }

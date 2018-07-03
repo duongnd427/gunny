@@ -24,6 +24,8 @@ public class StartButton extends GameObject {
                 && MouseInput.instance.position.y > (position.y - 130 / 2)
                 && MouseInput.instance.position.y < (position.y + 130 / 2)
                 ) {
+            this.clip = Utils.loadAudio("resources/audio/button.wav");
+            this.clip.start();
             SceneManager.instance.changeScene(new GamePlayScene());
         }
     }

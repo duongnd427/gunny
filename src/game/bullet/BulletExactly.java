@@ -11,6 +11,7 @@ import game.physic.PhysicBody;
 import game.physic.RunHitObject;
 import game.player.PlayerLeft;
 import game.player.PlayerRight;
+import platform.Platform;
 import renderer.ImageRenderer;
 
 public class BulletExactly extends GameObject implements PhysicBody {
@@ -29,7 +30,8 @@ public class BulletExactly extends GameObject implements PhysicBody {
                 GiftExactly.class,
                 PlayerLeft.class,
                 PlayerRight.class,
-                GiftLive.class
+                GiftLive.class,
+                Platform.class
         );
     }
 

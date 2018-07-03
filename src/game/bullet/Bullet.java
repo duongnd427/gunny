@@ -4,12 +4,14 @@ import base.GameObject;
 import base.Vector2D;
 import game.gift.Gift;
 import game.gift.GiftExactly;
+import game.gift.GiftLive;
 import game.gift.GiftTriple;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
 import game.physic.RunHitObject;
 import game.player.PlayerLeft;
 import game.player.PlayerRight;
+import platform.Platform;
 import renderer.ImageRenderer;
 
 public class Bullet extends GameObject implements PhysicBody {
@@ -19,14 +21,16 @@ public class Bullet extends GameObject implements PhysicBody {
 
     public Bullet() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("resources/images/bullet.png", 30, 16);
-        this.boxCollider = new BoxCollider(30, 16);
+        this.renderer = new ImageRenderer("resources/images/bullet.png", 40, 26);
+        this.boxCollider = new BoxCollider(40, 26);
         this.runHitObject = new RunHitObject(
                 Gift.class,
                 GiftTriple.class,
                 GiftExactly.class,
                 PlayerLeft.class,
-                PlayerRight.class
+                PlayerRight.class,
+                GiftLive.class,
+                Platform.class
         );
     }
 
@@ -39,7 +43,7 @@ public class Bullet extends GameObject implements PhysicBody {
     public void run() {
         super.run();
         this.velocity.addUp(0, 1);
-        this.boxCollider.position.set(this.position.x - 15, this.position.y - 8);
+        this.boxCollider.position.set(this.position.x - 20, this.position.y - 23);
         this.position.addUp(this.velocity);
         this.dieBullet();
         this.runHitObject.run(this);

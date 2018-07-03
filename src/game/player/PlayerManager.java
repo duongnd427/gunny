@@ -4,7 +4,10 @@ import base.GameObject;
 import base.GameObjectManager;
 import base.Vector2D;
 import constant.Constant;
-import game.bullet.Bullet;
+import game.bullet.bulletLeft.BulletLeft;
+import game.bullet.bulletRight.BulletRight;
+import game.player.playerLeft.PlayerLeft;
+import game.player.playerRight.PlayerRight;
 import game.viewFinder.ViewFinderLeft;
 import game.viewFinder.ViewFinderRight;
 import input.KeyboardInput;
@@ -12,6 +15,7 @@ import input.KeyboardInput;
 public class PlayerManager extends GameObject {
 
     public static PlayerManager instance = new PlayerManager();
+
 
     private Vector2D velocity;
 
@@ -39,8 +43,8 @@ public class PlayerManager extends GameObject {
     }
 
     private void inScreen(GameObject gameObject) {
-        if (gameObject.position.x <= 70) gameObject.position.x = 70;
-        if (gameObject.position.x >= 934) gameObject.position.x = 934;
+        if (gameObject.position.x <= 10) gameObject.position.x = 10;
+        if (gameObject.position.x >= 1000) gameObject.position.x = 1000;
     }
 
     public void shoot(GameObject gameObject) {
@@ -52,17 +56,20 @@ public class PlayerManager extends GameObject {
         }
 
         if (KeyboardInput.instance.spaceReleased) {
-            Bullet bulletPlayer = GameObjectManager.instance.recycle(Bullet.class);
             if (Constant.turn == 0) {
+                BulletLeft bulletLeft = GameObjectManager.instance.recycle(BulletLeft.class);
                 ViewFinderLeft viewFinderLeft = GameObjectManager.instance.findViewFinderLeft("left");
                 PlayerLeft playerLeft = GameObjectManager.instance.findPlayerLeft("left");
-                bulletPlayer.position.set(gameObject.position.add(viewFinderLeft.position.subtract(playerLeft.position)));
-                bulletPlayer.velocity.set((viewFinderLeft.position.subtract(playerLeft.position)).normalize().multiply((Constant.pow / 2)));
+                bulletLeft.position.set(gameObject.position.add(viewFinderLeft.position.subtract(playerLeft.position)));
+                bulletLeft.velocity.set((viewFinderLeft.position.subtract(playerLeft.position)).normalize().multiply((Constant.pow / 2)));
+
             } else if (Constant.turn == 1) {
+                BulletRight bulletRight = GameObjectManager.instance.recycle(BulletRight.class);
+
                 ViewFinderRight viewFinderRight = GameObjectManager.instance.findViewFinderRight("right");
                 PlayerRight playerRight = GameObjectManager.instance.findPlayerRight("right");
-                bulletPlayer.position.set(gameObject.position.add(viewFinderRight.position.subtract(playerRight.position)));
-                bulletPlayer.velocity.set((viewFinderRight.position.subtract(playerRight.position)).normalize().multiply((Constant.pow / 2)));
+                bulletRight.position.set(gameObject.position.add(viewFinderRight.position.subtract(playerRight.position)));
+                bulletRight.velocity.set((viewFinderRight.position.subtract(playerRight.position)).normalize().multiply((Constant.pow / 2)));
             }
             Constant.pow = 0;
         }

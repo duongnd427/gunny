@@ -1,8 +1,8 @@
 package base;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
-import game.player.PlayerLeft;
-import game.player.PlayerRight;
+import game.player.playerLeft.PlayerLeft;
+import game.player.playerRight.PlayerRight;
 import game.viewFinder.ViewFinderLeft;
 import game.viewFinder.ViewFinderRight;
 

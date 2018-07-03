@@ -1,9 +1,15 @@
 package scene;
 
 import base.GameObjectManager;
+import constant.Constant;
 import game.background.Background;
 import game.gift.GiftSpawner;
 import game.player.*;
+import game.player.playerLeft.HpLeft;
+import game.player.playerLeft.PlayerLeft;
+import game.player.playerRight.HpRight;
+import game.player.playerRight.PlayerRight;
+import maps.Map;
 import utils.Utils;
 
 import javax.sound.sampled.Clip;
@@ -13,7 +19,8 @@ public class GamePlayScene implements Scene {
     @Override
     public void init() {
         this.setupCharacter();
-        this.clip = Utils.loadAudio("resources/audio/gamePlay.wav");
+        Constant.turn = 0;
+        this.clip = Utils.loadAudio("resources/audio/play.wav");
         this.clip.start();
         this.clip.loop(-1);
     }
@@ -30,6 +37,13 @@ public class GamePlayScene implements Scene {
         GameObjectManager.instance.add(new Power());
         GameObjectManager.instance.add(new HpLeft());
         GameObjectManager.instance.add(new HpRight());
+        this.addPlatforms();
     }
+
+    private void addPlatforms(){
+        Map map = Map.load("resources/gunny_map_lvl.json");
+        map.generate();
+    }
+
 
 }

@@ -19,6 +19,7 @@ public class GiftSpawner extends GameObject {
     public void run() {
         super.run();
         int auto = random.nextInt(3);
+
         if (this.frameCounter.run()) {
             if (auto == 0) {
                 Gift gift = GameObjectManager.instance.recycle(Gift.class);

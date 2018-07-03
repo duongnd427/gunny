@@ -1,9 +1,4 @@
 import base.GameObjectManager;
-import game.background.Background;
-import game.gift.GiftSpawner;
-import game.player.PlayerLeft;
-import game.player.PlayerRight;
-import game.player.Power;
 import input.KeyboardInput;
 import input.MouseInput;
 import scene.GameStartScene;

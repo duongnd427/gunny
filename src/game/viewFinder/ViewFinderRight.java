@@ -2,7 +2,7 @@ package game.viewFinder;
 
 import base.GameObject;
 import base.GameObjectManager;
-import game.player.PlayerRight;
+import game.player.playerRight.PlayerRight;
 import renderer.ImageRenderer;
 
 public class ViewFinderRight extends GameObject {

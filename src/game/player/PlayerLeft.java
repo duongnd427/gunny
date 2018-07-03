@@ -4,43 +4,65 @@ import base.FrameCounter;
 import base.GameObject;
 import base.GameObjectManager;
 import constant.Constant;
-import game.bullet.Bullet;
-import game.bullet.BulletExactly;
-import game.gift.GiftTriple;
+import game.gift.GiftLive;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
+import game.physic.RunHitObject;
 import game.viewFinder.ViewFinderLeft;
 import input.KeyboardInput;
+import platform.Platform;
 import renderer.ImageRenderer;
-import scene.GameOverScene;
+import scene.PlayerRightWinScene;
 import scene.SceneManager;
+
+import java.awt.*;
 
 
 public class PlayerLeft extends GameObject implements PhysicBody {
 
     private ViewFinderLeft viewFinderLeft;
+    private FrameCounter delay = new FrameCounter(10);
+    private FrameCounter timeDelay = new FrameCounter(100);
     private FrameCounter frameCounter = new FrameCounter(1800);
     public BoxCollider boxCollider;
-    public int live = 5;
+    public int live = 6;
+    private boolean isAnimation = false;
+    private float GRAVITY = 0.05f;
+    private RunHitObject runHitObject;
 
 
 
     public PlayerLeft() {
-        this.position.set(100, 450);
+        this.position.set(100, 0);
         this.side = "left";
-        this.renderer = new ImageRenderer("resources/images/player.png", 50, 36);
-        this.boxCollider = new BoxCollider(50, 36);
+        this.renderer = new ImageRenderer("resources/images/player.png", 70, 50);
+        this.boxCollider = new BoxCollider(70, 50);
         viewFinderLeft = GameObjectManager.instance.recycle(ViewFinderLeft.class);
+        this.runHitObject = new RunHitObject(
+                Platform.class
+        );
     }
 
     @Override
     public void run() {
+        if (isAnimation) {
+            if (timeDelay.run()) {
+                timeDelay.reset();
+                isAnimation = false;
+            }
+        }
+        this.velocity.y += GRAVITY;
+        moveVertica();
+        this.position.addUp(velocity);
+        this.runHitObject.run(this);
 
         if (Constant.turn == 0) {
-
+            if (this.position.y > 600){
+                SceneManager.instance.changeScene(new PlayerRightWinScene());
+            }
                 viewFinderLeft.isAlive = true;
                 viewFinderLeft.run();
-                this.boxCollider.position.set(this.position.x - 25, this.position.y - 18);
+                this.boxCollider.position.set(this.position.x - 35, this.position.y - 25);
                 PlayerManager.instance.shoot(this);
                 PlayerManager.instance.move(this);
                 if (KeyboardInput.instance.spaceReleased || frameCounter.run()) {
@@ -54,6 +76,27 @@ public class PlayerLeft extends GameObject implements PhysicBody {
         }
     }
 
+    private void moveVertica() {
+
+        BoxCollider nextBoxCollider = boxCollider.shift(0,velocity.y);
+
+        Platform platform = GameObjectManager.instance.checkCollision(nextBoxCollider, Platform.class);
+        if(platform != null){
+            velocity.y = 0;
+        }
+    }
+
+    @Override
+    public void render(Graphics graphics) {
+        if (isAnimation) {
+            if (delay.run()){
+                delay.reset();
+                return;
+            }
+        }
+        super.render(graphics);
+    }
+
     @Override
     public BoxCollider getBoxCollider() {
         return this.boxCollider;
@@ -61,15 +104,20 @@ public class PlayerLeft extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
-        if (gameObject instanceof GiftTriple) {
-            this.live += 2;
+        if (gameObject instanceof GiftLive) {
+            if(this.live < 4){
+                this.live += 2;
+            }else if(this.live == 4){
+                this.live += 1;
+            }
         }
         else {
             this.live -= 1;
+            if (this.live < 5) this.isAnimation = true;
         }
         if (this.live == 0) {
             this.isAlive = false;
-            SceneManager.instance.changeScene(new GameOverScene());
+            SceneManager.instance.changeScene(new PlayerRightWinScene());
         }
     }
 
