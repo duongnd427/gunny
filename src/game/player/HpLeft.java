@@ -2,6 +2,7 @@ package game.player;
 
 import base.GameObject;
 import base.GameObjectManager;
+import game.player.playerLeft.PlayerLeft;
 import renderer.HpRenderer;
 
 

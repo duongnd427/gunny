@@ -26,10 +26,10 @@ public class PlayerManager extends GameObject {
     public void move(GameObject gameObject) {
         if (Constant.countMove != 3) {
             if (KeyboardInput.instance.leftPressed) {
-                this.velocity.x -= 10;
+                this.velocity.x -= 5;
             }
             if (KeyboardInput.instance.rightPressed) {
-                this.velocity.x += 10;
+                this.velocity.x += 5;
             }
             if (KeyboardInput.instance.leftReleased) {
                 this.velocity.x = 0;Constant.countMove += 1;

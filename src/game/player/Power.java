@@ -11,7 +11,7 @@ public class Power extends GameObject {
 
 
     public Power() {
-        this.renderer = new PowerRenderer(0, 30, Color.MAGENTA);
+        this.renderer = new PowerRenderer(0, 30, Color.green);
     }
 
     @Override

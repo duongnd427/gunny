@@ -2,6 +2,7 @@ package game.player;
 
 import base.GameObject;
 import base.GameObjectManager;
+import game.player.playerRight.PlayerRight;
 import renderer.HpRenderer;
 
 import java.awt.*;

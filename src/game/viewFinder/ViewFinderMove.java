@@ -29,7 +29,9 @@ public class ViewFinderMove {
             this.angle = 0;
         }
 
-        this.velocity.set(this.velocity.rotate(angle));
+        if (this.velocity.rotate(angle).y < -40){
+            this.velocity.set(this.velocity.rotate(angle));
+        }
         gameObject.position.addUp(this.velocity);
     }
 
