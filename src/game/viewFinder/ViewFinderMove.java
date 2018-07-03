@@ -17,10 +17,10 @@ public class ViewFinderMove {
 
     public void move(GameObject gameObject) {
         if (KeyboardInput.instance.upPressed) {
-            this.angle = -1.0;
+                this.angle = -1.0;
         }
         if (KeyboardInput.instance.downPressed) {
-            this.angle =  1.0;
+                this.angle = 1.0;
         }
         if (KeyboardInput.instance.upReleased) {
             this.angle = 0;

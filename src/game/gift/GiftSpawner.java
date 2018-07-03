@@ -12,7 +12,7 @@ public class GiftSpawner extends GameObject {
 
     public GiftSpawner() {
         this.random = new Random();
-        this.frameCounter = new FrameCounter(1000);
+        this.frameCounter = new FrameCounter(1500);
     }
 
     @Override

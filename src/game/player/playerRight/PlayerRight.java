@@ -13,6 +13,7 @@ import game.player.PlayerManager;
 import game.viewFinder.ViewFinderRight;
 import input.KeyboardInput;
 import platform.Platform;
+import renderer.AnimationRenderer;
 import renderer.ImageRenderer;
 import scene.PlayerLeftWinScene;
 import scene.SceneManager;
@@ -35,7 +36,10 @@ public class PlayerRight extends GameObject implements PhysicBody {
     public PlayerRight() {
         this.side = "right";
         this.position.set(900, 0);
-        this.renderer = new ImageRenderer("resources/images/player2.png", 80, 60);
+        this.renderer = new AnimationRenderer(10,80, 60,
+                "resources/images/player21.png",
+                "resources/images/player22.png"
+        );
         viewFinderRight = GameObjectManager.instance.recycle(ViewFinderRight.class);
         this.boxCollider = new BoxCollider(50, 60);
         viewFinderRight.isAlive = false;
@@ -64,6 +68,8 @@ public class PlayerRight extends GameObject implements PhysicBody {
                 viewFinderRight.isAlive = true;
                 viewFinderRight.run();
             if (this.position.y > 600){
+                Constant.turn = 0;
+                ExplosionSpawner.instance.explosionDiePlayer(this);
                 SceneManager.instance.changeScene(new PlayerLeftWinScene());
             }
                 PlayerManager.instance.shoot(this);

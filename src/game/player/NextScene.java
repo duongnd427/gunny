@@ -7,7 +7,6 @@ import base.GameObject;
 import constant.Constant;
 import scene.PlayerLeftWinScene;
 import scene.PlayerRightWinScene;
-import scene.Scene;
 import scene.SceneManager;
 
 public class NextScene extends GameObject {
@@ -29,7 +28,6 @@ public class NextScene extends GameObject {
                                 } else if (Constant.turn == 0) {
                                     SceneManager.instance.changeScene(new PlayerLeftWinScene());
                                 }
-                                SceneManager.instance.changeScene(new PlayerRightWinScene());
                                 return true;
                             }
                         }

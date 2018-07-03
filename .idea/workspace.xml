@@ -7,21 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0772c19-98d3-4afc-b145-cdb5001d4693" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/gunny_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_6_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gunny.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Gunny.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gunny_jar/gunny.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gunny_jar/gunny.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/PlayerManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/player/PlayerManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/Power.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/player/Power.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/renderer/PowerRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/renderer/PowerRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/HpLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/HpLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/HpRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/HpRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/PlayerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/PlayerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/Power.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/Power.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/gift/GiftSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/gift/GiftSpawner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/player/NextScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/NextScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/player/playerLeft/Left.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerLeft/Left.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/player/playerRight/Right.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerRight/Right.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/viewFinder/ViewFinderMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/viewFinder/ViewFinderMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/PowerRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/PowerRenderer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +29,7 @@
       <file leaf-file-name="ViewFinderMove.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="427">
               <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
             </state>
           </provider>
@@ -55,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -72,7 +65,7 @@
       <file leaf-file-name="HpRight.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/player/HpRight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="221">
               <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
             </state>
           </provider>
@@ -82,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/src/game/player/HpLeft.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -161,7 +154,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="275" />
     <option name="y" value="155" />
     <option name="width" value="1400" />
@@ -172,8 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,7 +213,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,7 +318,8 @@
       <workItem from="1530360595096" duration="503000" />
       <workItem from="1530416317325" duration="600000" />
       <workItem from="1530615771137" duration="14000" />
-      <workItem from="1530616554628" duration="631000" />
+      <workItem from="1530616554628" duration="1231000" />
+      <workItem from="1530636180532" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="findPlayer = null">
       <created>1530070827133</created>
@@ -366,10 +360,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18289000" />
+    <option name="totallyTimeSpent" value="18966000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -380,19 +374,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32352942" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3251634" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32352942" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14599092" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14977308" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -639,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/player/HpRight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="221">
           <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
         </state>
       </provider>
@@ -647,20 +641,20 @@
     <entry file="file://$PROJECT_DIR$/src/game/player/HpLeft.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="427">
           <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
         </state>
       </provider>
