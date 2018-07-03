@@ -4,6 +4,7 @@ import base.FrameCounter;
 import base.GameObject;
 import base.GameObjectManager;
 import constant.Constant;
+import game.bullet.BulletLive;
 import game.bullet.ExplosionSpawner;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
@@ -113,6 +114,14 @@ public class PlayerRight extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
+        if (gameObject instanceof BulletLive) {
+            if (this.live == 4) {
+                this.live += 2;
+            }
+            if (this.live < 4) {
+                this.live += 3;
+            }
+        }
         this.live -= 1;
         if (this.live < 5) this.isAnimation = true;
         if (this.live == 0) {

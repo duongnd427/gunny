@@ -41,13 +41,13 @@ public class GiftExactly extends GameObject implements PhysicBody {
             BulletExactlyLeft bulletExactlyLeft = GameObjectManager.instance.recycle(BulletExactlyLeft.class);
             bulletExactlyLeft.position.set(this.position);
             PlayerRight playerRight = GameObjectManager.instance.findPlayerRight("right");
-            bulletExactlyLeft.velocity.set((playerRight.position.subtract(this.position).normalize().multiply(10.0f)));
+            bulletExactlyLeft.velocity.set((playerRight.position.subtract(this.position).normalize().multiply(5.0f)));
         }
         if (Constant.turn == 0) {
             BulletExactlyRight bulletExactlyRight = GameObjectManager.instance.recycle(BulletExactlyRight.class);
             bulletExactlyRight.position.set(this.position);
             PlayerLeft playerLeft = GameObjectManager.instance.findPlayerLeft("left");
-            bulletExactlyRight.velocity.set((playerLeft.position.subtract(this.position).normalize().multiply(10.0f)));
+            bulletExactlyRight.velocity.set((playerLeft.position.subtract(this.position).normalize().multiply(5.0f)));
         }
     }
 

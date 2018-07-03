@@ -7,9 +7,9 @@ import java.awt.*;
 
 public class TextRight extends GameObject {
     public TextRight() {
-        this.position.set(210, 250);
+        this.position.set(350, 250);
         this.renderer = new TextRenderer(
-                "PLAYER RIGHT WIN",
+                "URF WIN",
                 Color.blue,
                 "resources/Kings Feast.otf",
                 80

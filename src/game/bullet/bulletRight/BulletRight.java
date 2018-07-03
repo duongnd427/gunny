@@ -5,6 +5,7 @@ import base.Vector2D;
 import game.bullet.ExplosionSpawner;
 import game.gift.Gift;
 import game.gift.GiftExactly;
+import game.gift.GiftLive;
 import game.gift.GiftTriple;
 import game.physic.BoxCollider;
 import game.physic.PhysicBody;
@@ -40,6 +41,7 @@ public class BulletRight extends GameObject implements PhysicBody {
                 Gift.class,
                 GiftTriple.class,
                 GiftExactly.class,
+                GiftLive.class,
                 PlayerLeft.class,
                 PlayerRight.class,
                 Platform.class

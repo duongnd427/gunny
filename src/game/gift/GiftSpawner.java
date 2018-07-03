@@ -18,8 +18,7 @@ public class GiftSpawner extends GameObject {
     @Override
     public void run() {
         super.run();
-        int auto = random.nextInt(3);
-
+        int auto = random.nextInt(4);
         if (this.frameCounter.run()) {
             if (auto == 0) {
                 Gift gift = GameObjectManager.instance.recycle(Gift.class);
@@ -30,8 +29,10 @@ public class GiftSpawner extends GameObject {
             } else if (auto == 2) {
                 GiftTriple giftTriple = GameObjectManager.instance.recycle(GiftTriple.class);
                 giftTriple.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);
+            } else if (auto == 3) {
+                GiftLive giftLive = GameObjectManager.instance.recycle(GiftLive.class);
+                giftLive.position.set(this.random.nextInt(800) + 100, this.random.nextInt(400) + 50);
             }
-
             this.frameCounter.reset();
         }
     }
