@@ -1,5 +1,6 @@
 package scene;
 
+import base.FrameCounter;
 import base.GameObjectManager;
 import constant.Constant;
 import game.background.Background;
@@ -13,9 +14,11 @@ import maps.Map;
 import utils.Utils;
 
 import javax.sound.sampled.Clip;
+import java.util.Random;
 
 public class GamePlayScene implements Scene {
     private Clip clip;
+    private int autoMap = new Random().nextInt(4);
     @Override
     public void init() {
         this.setupCharacter();
@@ -37,13 +40,35 @@ public class GamePlayScene implements Scene {
         GameObjectManager.instance.add(new Power());
         GameObjectManager.instance.add(new HpLeft());
         GameObjectManager.instance.add(new HpRight());
-        this.addPlatforms();
+        if (autoMap == 0) {
+            this.addPlatforms1();
+        } else if (autoMap == 1) {
+            this.addPlatforms2();
+        } else if (autoMap == 2) {
+            this.addPlatforms3();
+        } else if (autoMap == 3) {
+            this.addPlatforms4();
+        }
     }
 
-    private void addPlatforms(){
-        Map map = Map.load("resources/gunny_map_lvl.json");
+    private void addPlatforms1() {
+        Map map = Map.load("resources/gunny_map_lvl1.json");
         map.generate();
     }
 
+    private void addPlatforms2() {
+        Map map = Map.load("resources/gunny_map_lvl2.json");
+        map.generate();
+    }
+
+    private void addPlatforms3() {
+        Map map = Map.load("resources/gunny_map_lvl3.json");
+        map.generate();
+    }
+
+    private void addPlatforms4() {
+        Map map = Map.load("resources/gunny_map_lvl4.json");
+        map.generate();
+    }
 
 }
