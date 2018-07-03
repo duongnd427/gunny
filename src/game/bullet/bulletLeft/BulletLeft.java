@@ -58,7 +58,7 @@ public class BulletLeft extends GameObject implements PhysicBody {
         super.run();
         this.velocity.addUp(0, 1);
         this.boxCollider.position.set(this.position.x - 15, this.position.y - 15);
-        this.position.addUp(this.velocity);
+        this.position.addUp(this.velocity.normalize().multiply(13));
         this.dieBullet();
         this.runHitObject.run(this);
     }

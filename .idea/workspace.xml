@@ -8,44 +8,18 @@
   <component name="ChangeListManager">
     <list default="true" id="c0772c19-98d3-4afc-b145-cdb5001d4693" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/bullet/Bullet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/bullet/BulletExactly.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/bullet/bulletLeft/BulletLeft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/bullet/bulletLeft/BulletLeft.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/bullet/bulletRight/BulletRight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/bullet/bulletRight/BulletRight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/gift/GiftExactly.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/gift/GiftExactly.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/gift/GiftLive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/gift/GiftLive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/gift/GiftSpawner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/gift/GiftSpawner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/HpLeft.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/HpRight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/Left.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/PlayerLeft.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/PlayerRight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/Right.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/playerLeft/PlayerLeft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/player/playerLeft/PlayerLeft.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gunny/game/player/playerRight/PlayerRight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gunny/game/player/playerRight/PlayerRight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/player.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/player2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/bullet/Bullet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/bullet/BulletExactly.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/gunny_map_lvl4.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/gunny_map_lvl4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/images/circle.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/circle.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/bullet/bulletLeft/BulletLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/bullet/bulletLeft/BulletLeft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/bullet/bulletRight/BulletRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/bullet/bulletRight/BulletRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/gift/GiftExactly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/gift/GiftExactly.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/gift/GiftLive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/gift/GiftLive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/gift/GiftSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/gift/GiftSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/HpLeft.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/HpRight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/Left.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/PlayerLeft.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/PlayerRight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/Right.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/player/playerRight/Right.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/player/playerRight/Right.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/text/TextLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/text/TextLeft.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/text/TextRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/text/TextRight.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,92 +31,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewFinderMove.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderMove.java">
+      <file leaf-file-name="GamePlayScene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scene/GamePlayScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state relative-caret-position="17">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Left.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/player/playerLeft/Left.java">
+      <file leaf-file-name="BulletLeft.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/bullet/bulletLeft/BulletLeft.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="244">
+              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextRight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/text/TextRight.java">
+      <file leaf-file-name="BulletRight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/bullet/bulletRight/BulletRight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="238">
+              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextLeft.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/game/text/TextLeft.java">
+      <file leaf-file-name="BulletExactlyRight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/bullet/bulletRight/BulletExactlyRight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="17">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Right.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/player/playerRight/Right.java">
+      <file leaf-file-name="BulletLive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/bullet/BulletLive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            <state relative-caret-position="-419">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="GiftLive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/gift/GiftLive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="255">
+              <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/maps/Map.java">
+      <file leaf-file-name="GiftSpawner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/gift/GiftSpawner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="-17">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/player/PlayerManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameObjectManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="119" column="25" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewFinderLeft.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderLeft.java">
+      <file leaf-file-name="PlayerLeft.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="119" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerRight.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GiftExactly.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/gift/GiftExactly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-238">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -177,6 +151,13 @@
         <option value="$PROJECT_DIR$/src/game/player/playerRight/Right.java" />
         <option value="$PROJECT_DIR$/src/game/text/TextRight.java" />
         <option value="$PROJECT_DIR$/src/game/text/TextLeft.java" />
+        <option value="$PROJECT_DIR$/src/scene/GamePlayScene.java" />
+        <option value="$PROJECT_DIR$/src/game/gift/GiftLive.java" />
+        <option value="$PROJECT_DIR$/src/game/gift/GiftSpawner.java" />
+        <option value="$PROJECT_DIR$/src/game/bullet/bulletLeft/BulletLeft.java" />
+        <option value="$PROJECT_DIR$/src/game/bullet/bulletRight/BulletRight.java" />
+        <option value="$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java" />
+        <option value="$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java" />
       </list>
     </option>
   </component>
@@ -201,6 +182,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,6 +255,13 @@
               <item name="gunny" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="gift" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gunny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gunny" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="player" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -304,12 +294,16 @@
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="viewFinder" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gunny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gunny" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,6 +410,8 @@
       <workItem from="1530616554628" duration="1231000" />
       <workItem from="1530636180532" duration="77000" />
       <workItem from="1530641344640" duration="645000" />
+      <workItem from="1530657139756" duration="291000" />
+      <workItem from="1530660497958" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="findPlayer = null">
       <created>1530070827133</created>
@@ -456,7 +452,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19611000" />
+    <option name="totallyTimeSpent" value="21413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -472,13 +468,12 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3251634" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32352942" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32352942" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15355521" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1603631" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -490,6 +485,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3267974" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,70 +503,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="pow" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base/GameObjectManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" column="56" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/Player.java" />
-    <entry file="file://$PROJECT_DIR$/src/GameWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/player/PlayerMove.java" />
     <entry file="file://$PROJECT_DIR$/src/game/player/PlayerSpawner.java" />
     <entry file="file://$PROJECT_DIR$/src/game/player/PlayerShoot.java" />
@@ -665,13 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerRight.java" />
     <entry file="file://$PROJECT_DIR$/src/game/player/PlayerManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -679,13 +605,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/PlayerLeft.java" />
     <entry file="file://$PROJECT_DIR$/src/maps/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -693,20 +613,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/HpRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/HpLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/HpRight.java" />
+    <entry file="file://$PROJECT_DIR$/src/game/player/HpLeft.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -714,12 +622,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/player/Right.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/Right.java" />
     <entry file="file://$PROJECT_DIR$/src/game/viewFinder/ViewFinderMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="510">
           <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
         </state>
       </provider>
@@ -748,7 +654,77 @@
     <entry file="file://$PROJECT_DIR$/src/game/text/TextLeft.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scene/GamePlayScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/bullet/bulletRight/BulletExactlyRight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/bullet/BulletLive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/gift/GiftExactly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/gift/GiftLive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/gift/GiftSpawner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/bullet/bulletLeft/BulletLeft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/bullet/bulletRight/BulletRight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/playerLeft/PlayerLeft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="119" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/player/playerRight/PlayerRight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
         </state>
       </provider>
     </entry>

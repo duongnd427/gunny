@@ -115,6 +115,9 @@ public class PlayerLeft extends GameObject implements PhysicBody {
     @Override
     public void getHit(GameObject gameObject) {
         if (gameObject instanceof BulletLive) {
+            if (this.live == 5) {
+                this.live += 1;
+            }
             if (this.live == 4) {
                 this.live += 2;
             }

@@ -42,12 +42,12 @@ public class GiftLive extends GameObject implements PhysicBody {
         if (Constant.turn == 1) {
             bulletLive.position.set(this.position);
             PlayerLeft playerLeft = GameObjectManager.instance.findPlayerLeft("left");
-            bulletLive.velocity.set((playerLeft.position.subtract(this.position).normalize()));
+            bulletLive.velocity.set((playerLeft.position.subtract(this.position).normalize().multiply(5)));
         }
         if (Constant.turn == 0) {
             bulletLive.position.set(this.position);
             PlayerRight playerRight = GameObjectManager.instance.findPlayerRight("right");
-            bulletLive.velocity.set((playerRight.position.subtract(this.position).normalize()));
+            bulletLive.velocity.set((playerRight.position.subtract(this.position).normalize().multiply(5)));
         }
     }
 }
